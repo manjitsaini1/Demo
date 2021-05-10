@@ -19,3 +19,8 @@ Route::get('/', function () {
 
 Route::get('/registration', [App\Http\Controllers\RegisterController::class,'create']);
 Route::post('/registration', [App\Http\Controllers\RegisterController::class, 'store']);
+
+
+Route::get('login', [LoginController::class, 'index'])->name('login');
+Route::post('login', [LoginController::class, 'login']);
+
